@@ -1,0 +1,478 @@
+/* ==========================================
+   RESET & GLOBAL STYLES
+   ========================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  background-color: #fcfbf9;
+  color: #121212;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ==========================================
+   HEADER STYLES
+   ========================================== */
+.site-header {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px 20px 0 20px;
+  border-bottom: 3px double #121212;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  color: #666;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e2e2e2;
+}
+
+.switcher-label {
+  font-weight: 600;
+  margin-right: 5px;
+}
+
+.switcher-btn {
+  background: none;
+  border: 1px solid #ccc;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  padding: 3px 8px;
+  margin-left: 2px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.switcher-btn:hover,
+.switcher-btn.active {
+  background-color: #121212;
+  color: #fff;
+  border-color: #121212;
+}
+
+.header-branding {
+  text-align: center;
+  padding: 25px 0 15px 0;
+}
+
+.site-title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 3.8rem;
+  font-weight: 700;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+}
+
+.category-nav {
+  border-top: 1px solid #121212;
+  border-bottom: 1px solid #121212;
+  margin-bottom: 30px;
+}
+
+.category-nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 8px 0;
+}
+
+.category-nav li {
+  margin: 0 15px;
+}
+
+.nav-link {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #333;
+  transition: color 0.2s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #990000;
+}
+
+/* ==========================================
+   VIEW SWITCHING
+   ========================================== */
+.view-section {
+  display: none;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.view-section.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ==========================================
+   ARTICLE CARD COMMON STYLES
+   ========================================== */
+.article-card {
+  cursor: pointer;
+  border-bottom: 1px solid #e2e2e2;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.article-card:hover .card-title {
+  color: #555;
+}
+
+.card-category {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #990000;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.card-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 10px;
+  transition: color 0.2s;
+}
+
+.card-summary {
+  font-size: 1.05rem;
+  color: #444;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.card-meta {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  color: #777;
+}
+
+.card-img-wrapper {
+  width: 100%;
+  overflow: hidden;
+  background-color: #eee;
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ==========================================
+   LAYOUT SWITCHER STYLES
+   ========================================== */
+/* Layout A: Headline Highlight (1 Main + 2 Side) */
+.articles-grid.layout-a {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+}
+
+.articles-grid.layout-a .article-card:nth-child(1) {
+  grid-column: 1 / 2;
+  border-right: 1px solid #e2e2e2;
+  padding-right: 30px;
+  border-bottom: none;
+}
+
+.articles-grid.layout-a .article-card:nth-child(1) .card-title {
+  font-size: 2.6rem;
+}
+
+.articles-grid.layout-a .article-card:nth-child(1) .card-img-wrapper {
+  height: 380px;
+  margin-bottom: 15px;
+}
+
+.articles-grid.layout-a .article-card:not(:nth-child(1)) .card-img-wrapper {
+  height: 160px;
+  margin-bottom: 10px;
+}
+
+/* Layout B: 3-Column Equal Grid */
+.articles-grid.layout-b {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.articles-grid.layout-b .article-card {
+  border-bottom: none;
+  border-right: 1px solid #e2e2e2;
+  padding-right: 25px;
+}
+
+.articles-grid.layout-b .article-card:last-child {
+  border-right: none;
+}
+
+.articles-grid.layout-b .card-img-wrapper {
+  height: 200px;
+  margin-bottom: 12px;
+}
+
+/* Layout C: List Style */
+.articles-grid.layout-c {
+  display: flex;
+  flex-direction: column;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.articles-grid.layout-c .article-card {
+  display: grid;
+  grid-template-columns: 1fr 240px;
+  gap: 20px;
+  align-items: center;
+}
+
+.articles-grid.layout-c .card-img-wrapper {
+  height: 150px;
+  grid-column: 2;
+  grid-row: 1 / 5;
+}
+
+/* ==========================================
+   ARTICLE DETAIL VIEW
+   ========================================== */
+.back-btn {
+  background: none;
+  border: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 8px 0;
+  margin-bottom: 25px;
+  color: #666;
+  transition: color 0.2s;
+}
+
+.back-btn:hover {
+  color: #121212;
+}
+
+.article-detail {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.detail-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.detail-category {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #990000;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.detail-title {
+  font-size: 3.2rem;
+  line-height: 1.1;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.detail-subtitle {
+  font-size: 1.4rem;
+  font-style: italic;
+  color: #555;
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+
+.detail-meta {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  color: #666;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+  margin-top: 20px;
+}
+
+.detail-img-wrapper {
+  margin: 30px 0;
+}
+
+.detail-img-wrapper img {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+}
+
+.detail-img-caption {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 8px;
+  text-align: left;
+}
+
+.detail-body {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: #222;
+}
+
+.detail-body p {
+  margin-bottom: 24px;
+}
+
+/* 각주 링크 스타일 */
+.footnote-ref {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  vertical-align: super;
+  color: #990000;
+  font-weight: 600;
+  margin-left: 2px;
+  padding: 0 2px;
+}
+
+.footnote-ref:hover {
+  text-decoration: underline;
+}
+
+/* 참고문헌 & 관련기사 섹션 */
+.references-section,
+.related-section {
+  margin-top: 50px;
+  padding-top: 25px;
+  border-top: 2px solid #121212;
+}
+
+.section-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.references-list {
+  list-style: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  color: #444;
+}
+
+.references-list li {
+  margin-bottom: 10px;
+  padding-left: 20px;
+  text-indent: -20px;
+  line-height: 1.5;
+}
+
+.references-list li:target {
+  background-color: #fff9e6;
+  padding: 5px;
+}
+
+.related-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 15px;
+}
+
+/* ==========================================
+   FOOTER
+   ========================================== */
+.site-footer {
+  border-top: 3px double #121212;
+  margin-top: 80px;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.copyright {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  color: #777;
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN (MOBILE)
+   ========================================== */
+@media (max-width: 768px) {
+  .site-title { font-size: 2.5rem; }
+  .header-top { flex-direction: column; gap: 10px; }
+  .category-nav ul { flex-wrap: wrap; gap: 10px; }
+  .category-nav li { margin: 0; }
+  
+  /* 모바일에서는 모든 레이아웃을 1열 스크롤로 강제 통합 */
+  .articles-grid.layout-a,
+  .articles-grid.layout-b,
+  .articles-grid.layout-c {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .articles-grid.layout-a .article-card:nth-child(1) {
+    border-right: none;
+    padding-right: 0;
+    border-bottom: 1px solid #e2e2e2;
+  }
+
+  .articles-grid.layout-b .article-card {
+    border-right: none;
+    padding-right: 0;
+    border-bottom: 1px solid #e2e2e2;
+  }
+
+  .articles-grid.layout-c .article-card {
+    grid-template-columns: 1fr;
+  }
+
+  .articles-grid.layout-c .card-img-wrapper {
+    grid-column: 1;
+    grid-row: auto;
+    height: 200px;
+  }
+
+  .detail-title { font-size: 2.2rem; }
+  .related-grid { grid-template-columns: 1fr; }
+}
