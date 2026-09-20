@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>THE CHRONICLE - Premium News</title>
+  
+  <!-- Google Fonts: Cormorant Garamond & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- 메인 헤더 -->
+  <header class="site-header">
+    <div class="header-top">
+      <span class="header-date" id="current-date">Sunday, September 20, 2026</span>
+      <div class="layout-switcher">
+        <span class="switcher-label">VIEW:</span>
+        <button class="switcher-btn active" data-layout="layout-a">Headline</button>
+        <button class="switcher-btn" data-layout="layout-b">3-Column</button>
+        <button class="switcher-btn" data-layout="layout-c">List</button>
+      </div>
+    </div>
+    
+    <div class="header-branding">
+      <a href="#" id="home-logo-link" class="site-title">THE CHRONICLE</a>
+    </div>
+
+    <nav class="category-nav">
+      <ul>
+        <li><a href="#" class="nav-link active">HOME</a></li>
+        <li><a href="#" class="nav-link">WORLD</a></li>
+        <li><a href="#" class="nav-link">POLITICS</a></li>
+        <li><a href="#" class="nav-link">TECH</a></li>
+        <li><a href="#" class="nav-link">CULTURE</a></li>
+        <li><a href="#" class="nav-link">OPINION</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- 메인 컨텐츠 영역 (뷰 전환) -->
+  <main class="container">
+    <!-- 메인 목록 뷰 -->
+    <section id="main-view" class="view-section active">
+      <div id="articles-grid" class="articles-grid layout-a">
+        <!-- JavaScript로 동적 삽입됨 -->
+      </div>
+    </section>
+
+    <!-- 상세 기사 뷰 -->
+    <section id="detail-view" class="view-section">
+      <button id="back-btn" class="back-btn">← Back to Home</button>
+      <article id="article-content" class="article-detail">
+        <!-- JavaScript로 동적 삽입됨 -->
+      </article>
+    </section>
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p class="footer-title">THE CHRONICLE</p>
+      <p class="copyright">© 2026 The Chronicle Company. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
