@@ -4,22 +4,25 @@
 const articlesData = [
   {
     id: "article-1",
-    category: "TECHNOLOGY",
-    title: "The Architecture of Silicon: How Neural Engines Reshape Computing",
+    category: "U.S.",
+    title: "A comprehensive history of ICE (And, what can be done)",
     subtitle: "As artificial intelligence scales, hardware designers abandon classical architectures for unified matrix processing.",
-    author: "By Eleanor Vance",
-    date: "September 20, 2026",
+    author: "By Nahyun Kang",
+    date: "September 21, 2026",
     image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
-    imageCaption: "A high-density semiconductor wafer undergoing optical inspection at a fabrication facility.",
-    summary: "Modern semiconductor engineering has reached a critical inflection point. As traditional Dennard scaling fades into history, chip designers are turning to specialized neural blocks to handle high-dimensional tensor operations.",
+    imageCaption: "ICE agents standing outside a house.",
+    summary: "ICE is the hot potato of the decade. Is Immigration Control getting too far?.",
     body: [
-      "For over four decades, microchip advancement adhered strictly to the rhythms of Moore's Law. However, as transistor gates approach atomic scales, physical limitations such as quantum tunneling and thermal dissipation have forced a radical redesign of silicon architecture<a href='#ref-1-1' class='footnote-ref'>[1]</a>.",
-      "Rather than prioritizing sequential instruction clock speeds, modern processors integrate massively parallel neural processing units (NPUs). These dedicated blocks execute matrix multiplication directly in memory arrays, bypassing the traditional von Neumann bottleneck that has constrained computing performance for generations.",
+      "ICE, or  U.S Immigration and Customs Enforcement is a relatively newly formed agency, which was created in Homeland Security’s major governmental reorganization process. It was “granted a unique combination of civil and criminal authorities to better protect national security and public safety in answer to the tragic events on 9/11”. 
+<a href='#ref-1-1' class='footnote-ref'>[1]</a>.",
+      " Deviating greatly from what it purports to do, ICE has terrorized the citizenry of the U.S. by imposing constant threats of deportation, using less-than-humane facilities for detention, and deportations to potentially dangerous countries. At this, the reader may ask: has ICE always been this authoritarian; this eager to ‘protect national security’? 
+
       "The architectural pivot carries profound implications for global technology infrastructure<a href='#ref-1-2' class='footnote-ref'>[2]</a>. Data centers now consume significant shares of municipal power grids, making energy-per-flop efficiency the primary metric of computational merit over raw clock speed."
     ],
     references: [
-      { id: "ref-1-1", text: "[1] Hennessy, J. L., & Patterson, D. A. (2019). A new golden age for computer architecture. Communications of the ACM, 62(2), 48-60." },
-      { id: "ref-1-2", text: "[2] Koomey, J., & Naffziger, S. (2016). Energy efficiency of computing what's feasible, what's plausible. IEEE Spectrum, 53(5), 50-55." }
+      { id: "ref-1-1", text: “History of ICE.” ICE, U.S. department of Homeland Security, https://www.ice.gov/history. 
+" },
+    { id: "ref-1-2", text: "[2] Koomey, J., & Naffziger, S. (2016). Energy efficiency of computing what's feasible, what's plausible. IEEE Spectrum, 53(5), 50-55." }
     ],
     relatedIds: ["article-2", "article-3"]
   },
